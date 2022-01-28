@@ -36,7 +36,7 @@ jobs:
       - name: Build from dockerfile
         run: |
           docker buildx build \
-            --platform linux/amd64,linux/appc64le,linux/s390x \
+            --platform linux/amd64,linux/ppc64le,linux/s390x \
             --cache-from $CACHE_IMAGE:latest \
             --tag $CACHE_IMAGE:latest \
             --build-arg BUILDKIT_INLINE_CACHE=1 \
